@@ -1,0 +1,206 @@
+.flex {
+    display: flex;
+}
+
+
+h2 {
+    font-size: 48px;
+    color:#283750
+}
+
+nav {
+    background-color: #283750;
+    display: flex;
+    justify-content: space-between;
+    min-height: 72px;
+    padding: 5px 0 10px 0;
+    align-items: center;
+}
+
+#name {
+    background-color: #8dc2c9;
+    color:#283750;
+}
+
+#name span {
+    margin-left: 20px;
+    font-size: 36px;
+}
+#nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 20px;
+
+}
+.nav-link {
+    width: fit-content;
+    margin-right: 20px;
+}
+.nav-link a {
+    color: #8dc2c9; 
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-divider {
+    width:0;
+    height: 2px;
+    background: linear-gradient(90deg, #283750, #8dc2c9);
+    transition: width .5s;
+}
+.nav-link:hover .nav-divider {
+    width: 100%;
+}
+
+.hero {
+    background-image: url(file:///Users/caysonbond/Downloads/bootcamp/Challenge-2/assets/css/IMG_5631.jpg);
+    min-height: 200px;
+    position: relative;
+    background-size: cover;
+}
+.hero span {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    font-size: 24px;
+    color: #283750;
+    background-color: #8dc2c9;
+    padding: 5px 10px 5px 10px;
+}
+
+.image-hero {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+}
+.image-hero span {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: #8dc2c9;
+    color: #283750;
+}
+
+.image-hero:hover {
+    filter: grayscale(0%)
+}
+
+.flex-container {
+    flex-flow: row nowrap;
+    margin: 24px 100px 0 0;
+}
+.vertical-rule {
+    width: 3px;
+    height: 100%;
+    background-color:#8dc2c9;
+    margin: 0 24px 0 24px;
+}
+
+.left-column {
+    flex: 0 0 25%;
+    justify-content: flex-end;
+}
+
+.right-column {
+    flex: 0 1 75%;
+}
+
+.flex-images {
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.image {
+    flex: 0 1 50%;
+    position: relative;
+    padding: 10px;
+}
+.image:nth-of-type(odd) {
+    padding-right: 10px;
+}
+.image:nth-of-type(even) {
+    padding-left: 10px;
+}
+
+.image span {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+}
+
+.hero-container {
+    position: relative;
+
+
+}
+
+.hero-container span {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: #8dc2c9;
+    color: #283750;
+}
+
+.contact-links a {
+    margin-right: 20px;
+    justify-content: right;
+    color:#8dc2c9;
+    font-size: 24px;
+}
+
+.image span {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: #8dc2c9;
+    color: #283750;
+  }
+  
+  .image {
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+  }
+  .image:hover {
+    filter: grayscale(0%);
+  }
+  
+  .image:hover span {
+  opacity: 1;
+  }
+  @media screen and (max-width:768px) {
+    #name span{
+        font-size: 24px;
+    }
+    .nav-link a {
+        font-size: 18px;
+    }
+    .vertical-rule {
+        display: none;
+    }
+    .flex-container {
+        flex-flow: column nowrap;
+        margin: 0 !important;
+    }
+    .left-column {
+        justify-content: center;
+        margin: 30px;
+    }
+    .image {
+        filter: grayscale(100%);
+        transition: filter .5s ease;
+      }
+      .image:hover {
+        filter: grayscale(0%);
+      }
+    
+    .image span {
+        opacity: 100%;
+    }
+  }
